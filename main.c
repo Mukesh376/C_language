@@ -24,18 +24,18 @@ int main()
     //1.pointer to a structure 
     Car *car1 = &tata;
     
-    //accessing structure elements
+    //4.accessing structure elements
     printf("%s\n",car1->name);
     printf("%d\n",car1->var1[0].version);
     
     // assinging function address to pointer
     ptr_func = add;
     
-    // using function pointer
+    // 9.using function pointer
     ans_add = ptr_func(6,5); 
     printf("%d\n",ans_add);
     
-    //using function pointer by passing into other fucntion as arguments
+    //8.using function pointer by passing into other fucntion as arguments
     ans_mul = mul(6,add);
     printf("%d\n",ans_mul);
     change_array(arr,3);
@@ -43,16 +43,16 @@ int main()
     //passing arrays to function as arguemnts
     printf("%d\n",arr[3]);
     
-    // access of pointers inside an structure
+    // 2.access of pointers inside an structure
     printf("%d\n",*(tata.seat));
     
-    // access of pointer inside a pointer to a strcutre 
+    // 3.access of pointer inside a pointer to a strcutre 
     printf("%d\n",*(car1->seat));
     
-    // fucntion pointer inside structure 
+    // 5.fucntion pointer inside structure 
     printf("%d\n", car1->ptr_func1(5,6));
     
-    // structure reference passed inside a fucntion
+    // 7.structure reference passed inside a fucntion
     exmple_func(&tata);
     
     
